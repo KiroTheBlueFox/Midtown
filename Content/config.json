@@ -1,0 +1,12 @@
+{
+  "Controls": {
+    "MoveUp": "Up",
+    "MoveDown": "Down",
+    "MoveLeft": "Left",
+    "MoveRight": "Right"
+  },
+
+  "Zoom": 1.5,
+  "Pixelisation": true,
+  "WaterDeepness": 16
+}
