@@ -1,9 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Midtown.Classes.Main.Game.Maps;
+using Midtown.Classes.Utils;
 using MonoGame.Extended;
 using MonoGame.Extended.Collisions;
-using MonoGameTestProject.Classes.Utils;
 using System;
 
 namespace Midtown.Classes.Main.Game.Entities
@@ -12,9 +12,15 @@ namespace Midtown.Classes.Main.Game.Entities
     {
         public IShapeF Bounds { get; set; }
         protected Vector2 _lastPosition;
-        public GameplayScene SceneOn;
+        public Vector2 TextureOffset { get; }
+        public new GameScreen Screen;
         private GameMap _currentMap;
+        public readonly bool Collidable;
         private Direction _lastDirection;
+        public Texture2D CircleTexture { get; private set; }
+        public bool HasShadow { get; protected set; } = true;
+        public Vector2 ShadowSize { get; }
+        public Vector2 ShadowOffset { get; }
         public bool IsReflective { get; }
         public Direction Direction
         {
@@ -62,47 +68,97 @@ namespace Midtown.Classes.Main.Game.Entities
             set
             {
                 _currentMap = value;
-                SceneOn.RefreshEntityCollision(this);
+                Screen.RefreshEntityCollision(this);
             }
         }
         public Vector2 Position
         {
-            get => ((RectangleF)this.Bounds).Center;
-            set => this.Bounds.Position = value;
+            get => ((RectangleF)Bounds).Center;
+            set => Bounds.Position = value;
         }
 
-        protected Entity(GameplayScene sceneOn, GameMap currentMap, RectangleF bounds, bool isReflective) : base(sceneOn.MainGame, sceneOn)
+        public Vector2 PixelPosition
         {
-            this.Bounds = bounds;
-            this.SceneOn = sceneOn;
-            this._currentMap = currentMap;
-            this._lastDirection = Direction.Down;
-            this.IsReflective = isReflective;
+            get => new Vector2(MathF.Round(Position.X), MathF.Round(Position.Y));
         }
 
-        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        protected Entity(GameScreen screen, GameMap currentMap, RectangleF bounds, Vector2 textureOffset, Vector2? shadowSize, Vector2? shadowOffset, bool isReflective, bool collidable) : base(screen.Game, screen)
         {
-            spriteBatch.Draw(CurrentTexture, Bounds.Position, Color.White);
-
-            base.Draw(gameTime, spriteBatch);
+            Bounds = bounds;
+            ShadowSize = shadowSize ?? Vector2.Zero;
+            ShadowOffset = shadowOffset ?? Vector2.Zero;
+            TextureOffset = textureOffset;
+            Screen = screen;
+            _currentMap = currentMap;
+            _lastDirection = Direction.Down;
+            IsReflective = isReflective;
+            Collidable = collidable;
         }
 
-        public virtual void DrawReflection(GameTime gameTime, SpriteBatch spriteBatch)
+        public override void Load()
+        {
+            CircleTexture = Game.Content.Load<Texture2D>("Textures/System/Circle");
+
+            base.Load();
+        }
+
+        public virtual void DrawShadow(GameTime gameTime)
+        {
+            SpriteBatch.Draw(CircleTexture, new Rectangle((PixelPosition + new Vector2(0, ((RectangleF) Bounds).Height ) - ShadowSize / 2f + ShadowOffset).ToPoint(), ShadowSize.ToPoint()), CircleTexture.Bounds, Color.Black);
+        }
+
+        public override void Draw(GameTime gameTime)
+        {
+            SpriteBatch.Draw(CurrentTexture, PixelPosition - new Vector2(CurrentTexture.Width / 2, CurrentTexture.Height / 2) + TextureOffset, Color.White);
+
+            base.Draw(gameTime);
+        }
+
+        public override void DrawDebug(GameTime gameTime)
+        {
+            SpriteBatch.DrawRectangle((RectangleF)Bounds, Color.Blue);
+
+            base.Draw(gameTime);
+        }
+
+        public virtual void DrawReflection(GameTime gameTime)
         {
             if (CurrentTexture != null)
-                spriteBatch.Draw(CurrentTexture, ((RectangleF)this.Bounds).BottomLeft - new Vector2(0, CurrentTexture.Height), null, Color.White, 0f, Vector2.Zero, 1, SpriteEffects.FlipVertically, 0f);
+                SpriteBatch.Draw(CurrentTexture, new Vector2(MathF.Round(((RectangleF)Bounds).BottomLeft.X), MathF.Round(((RectangleF)Bounds).BottomLeft.Y)) - new Vector2(0, CurrentTexture.Height), null, Color.White, 0f, Vector2.Zero, 1, SpriteEffects.FlipVertically, 0f);
         }
 
         public void Move(Vector2 movement)
         {
-            _lastPosition = this.Position;
+            _lastPosition = Position;
 
-            this.Bounds.Position += movement;
+            Point2 newPosition = Bounds.Position + movement;
+
+            if (newPosition.X < 0)
+                newPosition.X = 0;
+            else if (newPosition.X > CurrentMap.Width - ((RectangleF)Bounds).Width)
+                newPosition.X = CurrentMap.Width - ((RectangleF)Bounds).Width;
+
+            if (newPosition.Y < 0)
+                newPosition.Y = 0;
+            else if (newPosition.Y > CurrentMap.Height - ((RectangleF)Bounds).Height)
+                newPosition.Y = CurrentMap.Height - ((RectangleF)Bounds).Height;
+
+            Bounds.Position = newPosition;
         }
 
         public virtual void OnCollision(CollisionEventArgs collisionInfo)
         {
-            this.Bounds.Position -= collisionInfo.PenetrationVector;
+            if (collisionInfo.Other is Entity entity)
+            {
+                if (Collidable && entity.Collidable)
+                {
+                    Bounds.Position -= collisionInfo.PenetrationVector;
+                }
+            }
+            else
+            {
+                Bounds.Position -= collisionInfo.PenetrationVector;
+            }
         }
     }
 }

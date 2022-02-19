@@ -1,4 +1,11 @@
-﻿#if OPENGL
+﻿/**
+ *
+ * SHADER BY KIROTHEBLUEFOX
+ * FREE TO USE
+ *
+ */
+
+#if OPENGL
 	#define SV_POSITION POSITION
 	#define VS_SHADERMODEL vs_3_0
 	#define PS_SHADERMODEL ps_3_0
@@ -12,6 +19,10 @@ Texture2D TerrainTexture;
 float2 TerrainTextureSize;
 int Height;
 float Time;
+float EquationValueA = 25.0;
+float EquationValueB = 32.0;
+float EquationValueC = 2.0;
+float EquationValueD = 24.0;
 
 sampler2D SpriteTextureSampler = sampler_state
 {
@@ -38,7 +49,7 @@ float4 MainPS(VertexShaderOutput input) : COLOR
 {
 	float2 coords = input.TextureCoordinates;
 
-	coords.x += /* cos(coords.x * 200.0 + Time * 2.0) */ sin(coords.y * 200.0 + Time * 2.0) / 400.0;
+    coords.x += /*cos(coords.x * (TerrainTextureSize.x * (EquationValueA / EquationValueB)) + Time * EquationValueC) */ sin(coords.y * (TerrainTextureSize.y * (EquationValueA / EquationValueB)) + Time * EquationValueC) / (TerrainTextureSize.x * (EquationValueA / EquationValueD));
     float4 colorToDraw = tex2D(SpriteTextureSampler, coords);
     float4 currentPixel = tex2D(TerrainTextureSampler, input.TextureCoordinates);
     if (currentPixel.a == 0)

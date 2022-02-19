@@ -1,21 +1,28 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MonoGame.Extended.Input;
 
 namespace Midtown.Classes.Main
 {
     public class GameElement : GameComponent
     {
-        public int DrawLayer { get; }
+        public readonly int DrawLayer;
         public Texture2D CurrentTexture;
-        public MainGame MainGame { get; }
-        public Scene Scene { get; }
-        public GameElement(MainGame game, Scene scene) : base(game)
+        public new readonly MainGame Game;
+        public readonly Screen Screen;
+        public KeyboardStateExtended KeyboardState { get => Game.KeyboardState; }
+        public MouseStateExtended MouseState { get => Game.MouseState; }
+        public SpriteBatch SpriteBatch { get => Game.SpriteBatch; }
+        public GameElement(MainGame game, Screen screen) : base(game)
         {
-            MainGame = game;
-            Scene = scene;
+            Game = game;
+            Screen = screen;
         }
-        public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch) { }
-        public virtual void Draw(Matrix matrix, GameTime gameTime, SpriteBatch spriteBatch) { }
+        public virtual void Draw(GameTime gameTime) { }
+        public virtual void Draw(Matrix matrix, GameTime gameTime) { }
+        public virtual void DrawDebug(GameTime gameTime) { }
+        public virtual void DrawDebug(Matrix matrix, GameTime gameTime) { }
         public virtual void Load() { }
+        public virtual void LoadLanguage() { }
     }
 }

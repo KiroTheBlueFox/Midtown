@@ -1,0 +1,376 @@
+﻿{
+  "Name": "Kiro's Pixel Font Small",
+  "Height": 12,
+  "SpaceLength": 2,
+  "BaseLine": 4,
+  "Characters": {
+    "!": {
+      "Bounds": [ 0, 0, 2, 8 ]
+    },
+    "\"": {
+      "Bounds": [ 2, 0, 4, 8 ]
+    },
+    "#": {
+      "Bounds": [ 6, 0, 7, 8 ]
+    },
+    "$": {
+      "Bounds": [ 13, 0, 5, 8 ]
+    },
+    "%": {
+      "Bounds": [ 18, 0, 4, 8 ]
+    },
+    "&": {
+      "Bounds": [ 22, 0, 6, 8 ]
+    },
+    "'": {
+      "Bounds": [ 28, 0, 2, 8 ]
+    },
+    "(": {
+      "Bounds": [ 30, 0, 3, 8 ]
+    },
+    ")": {
+      "Bounds": [ 33, 0, 3, 8 ]
+    },
+    "*": {
+      "Bounds": [ 36, 0, 4, 8 ]
+    },
+    "+": {
+      "Bounds": [ 40, 0, 4, 8 ]
+    },
+    ",": {
+      "Bounds": [ 44, 0, 2, 8 ]
+    },
+    "-": {
+      "Bounds": [ 46, 0, 5, 8 ]
+    },
+    ".": {
+      "Bounds": [ 51, 0, 2, 8 ]
+    },
+    "/": {
+      "Bounds": [ 53, 0, 4, 8 ]
+    },
+    "0": {
+      "Bounds": [ 57, 0, 5, 8 ]
+    },
+    "1": {
+      "Bounds": [ 62, 0, 4, 8 ]
+    },
+    "2": {
+      "Bounds": [ 66, 0, 4, 8 ]
+    },
+    "3": {
+      "Bounds": [ 70, 0, 5, 8 ]
+    },
+    "4": {
+      "Bounds": [ 75, 0, 4, 8 ]
+    },
+    "5": {
+      "Bounds": [ 79, 0, 4, 8 ]
+    },
+    "6": {
+      "Bounds": [ 83, 0, 4, 8 ]
+    },
+    "7": {
+      "Bounds": [ 87, 0, 5, 8 ]
+    },
+    "8": {
+      "Bounds": [ 92, 0, 4, 8 ]
+    },
+    "9": {
+      "Bounds": [ 96, 0, 4, 8 ]
+    },
+    ":": {
+      "Bounds": [ 100, 0, 2, 8 ]
+    },
+    ";": {
+      "Bounds": [ 102, 0, 2, 8 ]
+    },
+    "<": {
+      "Bounds": [ 104, 0, 4, 8 ]
+    },
+    "=": {
+      "Bounds": [ 108, 0, 5, 8 ]
+    },
+    ">": {
+      "Bounds": [ 113, 0, 4, 8 ]
+    },
+    "?": {
+      "Bounds": [ 117, 0, 4, 8 ]
+    },
+
+    "A": {
+      "Bounds": [ 0, 8, 6, 8 ]
+    },
+    "B": {
+      "Bounds": [ 6, 8, 5, 8 ]
+    },
+    "C": {
+      "Bounds": [ 11, 8, 5, 8 ]
+    },
+    "D": {
+      "Bounds": [ 16, 8, 5, 8 ]
+    },
+    "E": {
+      "Bounds": [ 21, 8, 4, 8 ]
+    },
+    "F": {
+      "Bounds": [ 25, 8, 5, 8 ],
+      "Offset": -1
+    },
+    "G": {
+      "Bounds": [ 30, 8, 5, 8 ]
+    },
+    "H": {
+      "Bounds": [ 35, 8, 5, 8 ]
+    },
+    "I": {
+      "Bounds": [ 40, 8, 4, 8 ]
+    },
+    "J": {
+      "Bounds": [ 44, 8, 4, 8 ]
+    },
+    "K": {
+      "Bounds": [ 48, 8, 5, 8 ]
+    },
+    "L": {
+      "Bounds": [ 53, 8, 4, 8 ]
+    },
+    "M": {
+      "Bounds": [ 57, 8, 6, 8 ]
+    },
+    "N": {
+      "Bounds": [ 63, 8, 5, 8 ]
+    },
+    "O": {
+      "Bounds": [ 68, 8, 5, 8 ]
+    },
+    "P": {
+      "Bounds": [ 73, 8, 5, 8 ],
+      "Offset": -2
+    },
+    "Q": {
+      "Bounds": [ 78, 8, 5, 8 ]
+    },
+    "R": {
+      "Bounds": [ 83, 8, 5, 8 ]
+    },
+    "S": {
+      "Bounds": [ 88, 8, 4, 8 ]
+    },
+    "T": {
+      "Bounds": [ 92, 8, 4, 8 ],
+      "Offset": -1
+    },
+    "U": {
+      "Bounds": [ 96, 8, 5, 8 ]
+    },
+    "V": {
+      "Bounds": [ 101, 8, 4, 8 ]
+    },
+    "W": {
+      "Bounds": [ 105, 8, 8, 8 ]
+    },
+    "X": {
+      "Bounds": [ 113, 8, 6, 8 ]
+    },
+    "Y": {
+      "Bounds": [ 119, 8, 5, 8 ]
+    },
+    "Z": {
+      "Bounds": [ 124, 8, 6, 8 ]
+    },
+
+    "[": {
+      "Bounds": [ 0, 16, 3, 8 ]
+    },
+    "\\": {
+      "Bounds": [ 3, 16, 4, 8 ]
+    },
+    "]": {
+      "Bounds": [ 7, 16, 3, 8 ]
+    },
+    "^": {
+      "Bounds": [ 10, 16, 4, 8 ]
+    },
+    "_": {
+      "Bounds": [ 14, 16, 4, 8 ]
+    },
+    "`": {
+      "Bounds": [ 18, 16, 3, 8 ]
+    },
+    "a": {
+      "Bounds": [ 21, 16, 4, 8 ],
+      "ShouldOffset": true
+    },
+    "b": {
+      "Bounds": [ 25, 16, 4, 8 ]
+    },
+    "c": {
+      "Bounds": [ 29, 16, 4, 8 ],
+      "ShouldOffset": true
+    },
+    "d": {
+      "Bounds": [ 33, 16, 4, 8 ]
+    },
+    "e": {
+      "Bounds": [ 37, 16, 4, 8 ],
+      "ShouldOffset": true
+    },
+    "f": {
+      "Bounds": [ 41, 16, 5, 8 ]
+    },
+    "g": {
+      "Bounds": [ 46, 16, 4, 12 ],
+      "ShouldOffset": true
+    },
+    "h": {
+      "Bounds": [ 50, 16, 4, 8 ]
+    },
+    "i": {
+      "Bounds": [ 54, 16, 2, 8 ],
+      "ShouldOffset": true
+    },
+    "j": {
+      "Bounds": [ 56, 16, 3, 12 ],
+      "ShouldOffset": true
+    },
+    "k": {
+      "Bounds": [ 59, 16, 5, 8 ]
+    },
+    "l": {
+      "Bounds": [ 64, 16, 3, 8 ]
+    },
+    "m": {
+      "Bounds": [ 67, 16, 6, 8 ],
+      "ShouldOffset": true
+    },
+    "n": {
+      "Bounds": [ 73, 16, 4, 8 ],
+      "ShouldOffset": true
+    },
+    "o": {
+      "Bounds": [ 77, 16, 4, 8 ],
+      "ShouldOffset": true
+    },
+    "p": {
+      "Bounds": [ 81, 16, 4, 12 ],
+      "ShouldOffset": true
+    },
+    "q": {
+      "Bounds": [ 85, 16, 4, 12 ],
+      "ShouldOffset": true
+    },
+    "r": {
+      "Bounds": [ 89, 16, 4, 8 ],
+      "ShouldOffset": true
+    },
+    "s": {
+      "Bounds": [ 93, 16, 3, 8 ],
+      "ShouldOffset": true
+    },
+    "t": {
+      "Bounds": [ 96, 16, 4, 8 ]
+    },
+    "u": {
+      "Bounds": [ 101, 16, 4, 8 ],
+      "ShouldOffset": true
+    },
+    "v": {
+      "Bounds": [ 104, 16, 4, 8 ],
+      "ShouldOffset": true
+    },
+    "w": {
+      "Bounds": [ 108, 16, 6, 8 ],
+      "ShouldOffset": true
+    },
+    "x": {
+      "Bounds": [ 114, 16, 4, 8 ],
+      "ShouldOffset": true
+    },
+    "y": {
+      "Bounds": [ 118, 16, 4, 12 ],
+      "ShouldOffset": true
+    },
+
+    "z": {
+      "Bounds": [ 0, 24, 5, 8 ],
+      "ShouldOffset": true
+    },
+    "{": {
+      "Bounds": [ 5, 24, 4, 8 ]
+    },
+    "|": {
+      "Bounds": [ 9, 24, 2, 8 ]
+    },
+    "}": {
+      "Bounds": [ 11, 24, 4, 8 ]
+    },
+    "~": {
+      "Bounds": [ 15, 24, 5, 8 ]
+    },
+    "°": {
+      "Bounds": [ 20, 24, 4, 8 ]
+    },
+
+    "è": {
+      "Bounds": [ 0, 32, 4, 8 ],
+      "ShouldOffset": true
+    },
+    "é": {
+      "Bounds": [ 4, 32, 4, 8 ],
+      "ShouldOffset": true
+    },
+    "ê": {
+      "Bounds": [ 8, 32, 4, 8 ],
+      "ShouldOffset": true
+    },
+    "ë": {
+      "Bounds": [ 12, 32, 4, 8 ],
+      "ShouldOffset": true
+    },
+    "à": {
+      "Bounds": [ 16, 32, 4, 8 ],
+      "ShouldOffset": true
+    },
+    "â": {
+      "Bounds": [ 20, 32, 4, 8 ],
+      "ShouldOffset": true
+    },
+    "û": {
+      "Bounds": [ 24, 32, 4, 8 ],
+      "ShouldOffset": true
+    },
+    "ù": {
+      "Bounds": [ 28, 32, 4, 8 ],
+      "ShouldOffset": true
+    },
+    "ü": {
+      "Bounds": [ 32, 32, 4, 8 ],
+      "ShouldOffset": true
+    },
+    "ÿ": {
+      "Bounds": [ 36, 32, 4, 12 ],
+      "ShouldOffset": true
+    },
+    "ç": {
+      "Bounds": [ 40, 32, 4, 18 ],
+      "ShouldOffset": true
+    },
+    "ô": {
+      "Bounds": [ 44, 32, 4, 8 ],
+      "ShouldOffset": true
+    },
+    "ï": {
+      "Bounds": [ 48, 32, 4, 8 ],
+      "ShouldOffset": true
+    },
+    "î": {
+      "Bounds": [ 52, 32, 4, 8 ],
+      "ShouldOffset": true
+    },
+    "€": {
+      "Bounds": [ 56, 32, 6, 8 ]
+    }
+  },
+  "Accents": true
+}

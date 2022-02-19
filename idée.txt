@@ -1,0 +1,123 @@
+Genre :
+Survie et construction de village.
+
+Style :
+Bac à sable
+Construction
+Top-down 2D
+RPG
+Pixel-art simple
+
+Plateforme :
+PC Mac os Linux
+
+Nb joueurs :
+1 à 4
+
+PEGI 12
+
+Description :
+Jeu de construction dans lequel le joueur sera amené à rénover un village abandonné, afin de lui redonner vie.
+Le joueur pourra récolter des resources, quelles qu'elles soient : minage, bucheronnage, agriculture et combat.
+Le village a été déserté à cause d'une économie instable et de son manque d'indépendance : trop loin de toute civilisation.
+
+Principe du jeu : ???
+
+Inspirations :
+Stardew Valley
+Animal Crossing
+MySims
+
+Point clé : 
+Construction bac-à-sable.
+Coopération local et en ligne.
+Styles de gameplay variés et amusants.
+
+
+
+Histoire :
+Pendant un long trajet, le perso. voit un village abandonné au loin.
+Avide d'exploration et de découverte, il voudrait le visiter, et change donc son trajet.
+
+
+
+Idées : 
+Grande ville visitable :
+ - Casino
+ - Animalerie
+   - Types : Chien, Chat, Oiseau, Perroquet
+   - Pelage choisissable
+   - Nommable (ou nom aléatoire)
+Village / Nature : 
+ - Animaux Sauvages
+   - Apprivoisable selon l'espèce
+ - Différents Biomes
+   - Types
+     - Bois
+       - Sombre
+       - labyrintique
+       - Dangereux
+       - Récompenses :
+         - Bois
+         - Loot de monstres
+         - Structures explorables
+     - Montagne
+       - Biodiversité (faune et flore)
+     - Plage
+       - Pêche
+     - Mines
+       - Minage
+       - Exploration souterraine
+         - Danger mais pas trop (un peu d'ennemis)
+         - Structures explorables
+     - Mer
+       - Pêche
+       - Exploration sous-marine
+         - Métal
+         - Caisses
+         - Objets précieux
+         - Danger mais pas trop (un peu d'ennemis)
+         - Structures explorables
+
+
+Gameplays :
+ - Pêche
+   - Nourriture
+   - Revente
+   
+ - Cuisine
+   - Diversité des recettes
+   - Mini-jeux
+   - Réduit la faim
+   
+ - Minage
+   - Démineur
+ 
+ - Forgeage
+   - Qualité des outils
+   - Mini-jeu à points
+ 
+ - Systèmes
+   - Faim
+     - Inverse des compétences
+     - 0% : Lent, las, nul aux mini-jeux (sauf cuisine)
+
+
+Armes :
+  - Tranchantes : Epées, couteau
+  - Transperçant : Lances, dague
+  - Lourd : Marteau/Massue
+  - Fendant : Hache
+
+
+UI : 
+ - Inventaire
+   - Cases utilitaires
+     - Mini-map (désactivable)
+     - Cosmétiques
+     - Défenses
+   - Taille : ???
+ - Choix d'outils avant mini-jeu
+ - Placement objets :
+   - Mode édition
+   - Edition rapide

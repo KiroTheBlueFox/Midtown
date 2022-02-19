@@ -12,6 +12,7 @@ namespace Midtown.Classes.Utils
         public float Zoom { get; set; }
         public bool Pixelisation { get; set; }
         public int WaterDeepness { get; set; }
+        public string Language { get; set; }
         public KeyboardState KeyboardState;
         public KeyboardStateExtended KeyboardStateExtended;
         public MouseState MouseState;
@@ -21,7 +22,7 @@ namespace Midtown.Classes.Utils
 
         public Config(Game game, ConfigValues values)
         {
-            this.Game = game;
+            Game = game;
             Controls = new Dictionary<string, Keys>();
             foreach (KeyValuePair<string, string> control in values.Controls)
             {
@@ -30,6 +31,7 @@ namespace Midtown.Classes.Utils
             Zoom = values.Zoom;
             Pixelisation = values.Pixelisation;
             WaterDeepness = values.WaterDeepness;
+            Language = values.Language;
         }
 
         public Keys GetKey(string keyName)
@@ -39,7 +41,7 @@ namespace Midtown.Classes.Utils
 
         public KeyStates GetKeyState(string keyName)
         {
-            if (Array.Exists<string>(MouseKeys.MouseKeyList, key => key == keyName))
+            if (Array.Exists(MouseKeys.MouseKeyList, key => key == keyName))
             {
                 return GetMouseState(keyName);
             }
@@ -125,10 +127,11 @@ namespace Midtown.Classes.Utils
 
     public class ConfigValues
     {
-        public Dictionary<string, string> Controls { get; set; }
-        public float Zoom { get; set; }
-        public bool Pixelisation { get; set; }
-        public int WaterDeepness { get; set; }
+        public Dictionary<string, string> Controls;
+        public float Zoom;
+        public bool Pixelisation;
+        public int WaterDeepness;
+        public string Language;
     }
 
     public class ControlKeys
@@ -137,6 +140,10 @@ namespace Midtown.Classes.Utils
         public const string MoveDown = "MoveDown";
         public const string MoveLeft = "MoveLeft";
         public const string MoveRight = "MoveRight";
+        public const string Interact = "Interact";
+        public const string Walk = "Walk";
+        public const string Confirm = "Confirm";
+        public const string Cancel = "Cancel";
     }
 
     public enum KeyStates

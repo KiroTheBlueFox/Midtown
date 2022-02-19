@@ -1,0 +1,19 @@
+﻿{
+  "Name": "Pixel Operator Bold",
+  "Height": 16,
+  "SpaceLength": 4,
+  "MinimumCharacterWidth": 4,
+  "Characters": [
+    "_",
+    "",
+    "!',-./:;<=>I\\`il|¡¦´·¸ÌÍÎÏìíîïı–‘’‚•",
+    "\"*ft¨°ð˚“”„",
+    "&()+0123456789?ABCDEFGHJKLNOPQRSTUVXYZ[]^abcdeghjknopqrsuvxyz{}¥¬±µ¿ÀÁÂÃÄÅÇÈÉÊËÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåçèéêëñòóôõö÷øùúûüýþÿĈĉČčĎĚěĜĝĤĥĴĵŇňŘřŜŝŠšŤŬŭŮůŸŽžˆˇ˘—†‡",
+    "#$@MWmw~¢£©®¶˜",
+    "«»",
+    "%ÆæŒœ",
+    "ť…",
+    "ď"
+  ],
+  "MissingCharacter": "?"
+}

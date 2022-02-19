@@ -14,21 +14,72 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin config.json
-/copy:config.json
-
 #begin Effects/WaterMovement.fx
 /importer:EffectImporter
 /processor:EffectProcessor
 /processorParam:DebugMode=Auto
 /build:Effects/WaterMovement.fx
 
+#begin Fonts/PixelOperator.ttf
+/copy:Fonts/PixelOperator.ttf
+
+#begin Fonts/PixelOperator8.ttf
+/copy:Fonts/PixelOperator8.ttf
+
+#begin Fonts/PixelOperator8-Bold.ttf
+/copy:Fonts/PixelOperator8-Bold.ttf
+
+#begin Fonts/PixelOperator-Bold.ttf
+/copy:Fonts/PixelOperator-Bold.ttf
+
+#begin Fonts/PixelOperatorHB.ttf
+/copy:Fonts/PixelOperatorHB.ttf
+
+#begin Fonts/PixelOperatorHB8.ttf
+/copy:Fonts/PixelOperatorHB8.ttf
+
+#begin Fonts/PixelOperatorHBSC.ttf
+/copy:Fonts/PixelOperatorHBSC.ttf
+
+#begin Fonts/PixelOperatorMono.ttf
+/copy:Fonts/PixelOperatorMono.ttf
+
+#begin Fonts/PixelOperatorMono8.ttf
+/copy:Fonts/PixelOperatorMono8.ttf
+
+#begin Fonts/PixelOperatorMono8-Bold.ttf
+/copy:Fonts/PixelOperatorMono8-Bold.ttf
+
+#begin Fonts/PixelOperatorMono-Bold.ttf
+/copy:Fonts/PixelOperatorMono-Bold.ttf
+
+#begin Fonts/PixelOperatorMonoHB.ttf
+/copy:Fonts/PixelOperatorMonoHB.ttf
+
+#begin Fonts/PixelOperatorMonoHB8.ttf
+/copy:Fonts/PixelOperatorMonoHB8.ttf
+
+#begin Fonts/PixelOperatorSC.ttf
+/copy:Fonts/PixelOperatorSC.ttf
+
+#begin Fonts/PixelOperatorSC-Bold.ttf
+/copy:Fonts/PixelOperatorSC-Bold.ttf
+
+#begin Lang/en.json
+/copy:Lang/en.json
+
+#begin Lang/fr.json
+/copy:Lang/fr.json
+
 #begin Maps/test-map.tmx
 /importer:TiledMapImporter
 /processor:TiledMapProcessor
 /build:Maps/test-map.tmx
 
-#begin Textures/player.png
+#begin Textures/Entities/Player.json
+/copy:Textures/Entities/Player.json
+
+#begin Textures/Entities/Player.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -38,9 +89,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Textures/player.png
+/build:Textures/Entities/Player.png
 
-#begin Textures/temp-tileset.png
+#begin Textures/MainMenu/Arrow.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -50,9 +101,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Textures/temp-tileset.png
+/build:Textures/MainMenu/Arrow.png
 
-#begin Textures/tileset-test.png
+#begin Textures/MainMenu/BackgroundBack.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -62,15 +113,271 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Textures/tileset-test.png
+/build:Textures/MainMenu/BackgroundBack.png
 
-#begin Tilesets/terrain.tsx
+#begin Textures/MainMenu/BackgroundCar.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/MainMenu/BackgroundCar.png
+
+#begin Textures/MainMenu/BackgroundClouds.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/MainMenu/BackgroundClouds.png
+
+#begin Textures/MainMenu/BackgroundFront.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/MainMenu/BackgroundFront.png
+
+#begin Textures/MainMenu/BackgroundMiddle.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/MainMenu/BackgroundMiddle.png
+
+#begin Textures/MainMenu/BackgroundSky.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/MainMenu/BackgroundSky.png
+
+#begin Textures/MainMenu/BackgroundWater.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/MainMenu/BackgroundWater.png
+
+#begin Textures/MainMenu/BackgroundWaterMask.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/MainMenu/BackgroundWaterMask.png
+
+#begin Textures/MainMenu/Cross.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/MainMenu/Cross.png
+
+#begin Textures/MainMenu/Gradient.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/MainMenu/Gradient.png
+
+#begin Textures/MainMenu/Title.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/MainMenu/Title.png
+
+#begin Textures/Objects/ColasBimStatue.json
+/copy:Textures/Objects/ColasBimStatue.json
+
+#begin Textures/Objects/ColasBimStatue.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Objects/ColasBimStatue.png
+
+#begin Textures/Objects/JustRealxStatue.json
+/copy:Textures/Objects/JustRealxStatue.json
+
+#begin Textures/Objects/JustRealxStatue.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Objects/JustRealxStatue.png
+
+#begin Textures/Objects/SerothsStatue.json
+/copy:Textures/Objects/SerothsStatue.json
+
+#begin Textures/Objects/SerothsStatue.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Objects/SerothsStatue.png
+
+#begin Textures/Objects/Tree.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Objects/Tree.png
+
+#begin Textures/System/Circle.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/System/Circle.png
+
+#begin Textures/System/DayLightCycle.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/System/DayLightCycle.png
+
+#begin Textures/Tilesets/OutdoorTerrains.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Tilesets/OutdoorTerrains.png
+
+#begin Textures/UI/ChatBubble.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/UI/ChatBubble.png
+
+#begin Textures/UI/ColasBim.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/UI/ColasBim.png
+
+#begin Textures/UI/JustRealx.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/UI/JustRealx.png
+
+#begin Textures/UI/Seroths.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/UI/Seroths.png
+
+#begin Tilesets/OutdoorTerrains.tsx
 /importer:TiledMapTilesetImporter
 /processor:TiledMapTilesetProcessor
-/build:Tilesets/terrain.tsx
-
-#begin Tilesets/test-tileset.tsx
-/importer:TiledMapTilesetImporter
-/processor:TiledMapTilesetProcessor
-/build:Tilesets/test-tileset.tsx
+/build:Tilesets/OutdoorTerrains.tsx
 

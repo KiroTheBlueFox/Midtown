@@ -17,21 +17,23 @@ namespace Midtown.Classes.Main.Game.Maps
         public int Height => _tiledMap.HeightInPixels;
         public int WidthInTiles => _tiledMap.Width;
         public int HeightInTiles => _tiledMap.Height;
+        public float TileSize => (_tiledMap.TileHeight + _tiledMap.TileWidth) / 2f;
+        public Tile[,] Tiles;
         public TiledMapRenderer Renderer;
         private readonly string _file;
         public List<CollisionRectangle> Collisions;
         public List<TeleportationZone> TeleportationZones;
 
-        public GameMap(MainGame game, GameplayScene scene, string file, string name) : base(game, scene)
+        public GameMap(MainGame game, GameScreen scene, string file, string name) : base(game, scene)
         {
-            this._file = file;
-            this.Name = name;
+            _file = file;
+            Name = name;
         }
 
         public override void Initialize()
         {
-            this.Collisions = new List<CollisionRectangle>();
-            this.TeleportationZones = new List<TeleportationZone>();
+            Collisions = new List<CollisionRectangle>();
+            TeleportationZones = new List<TeleportationZone>();
 
             base.Initialize();
         }
@@ -44,7 +46,7 @@ namespace Midtown.Classes.Main.Game.Maps
                 {
                     foreach (TiledMapObject layerObject in layer.Objects)
                     {
-                        this.Collisions.Add(new CollisionRectangle(this, new RectangleF(layerObject.Position, layerObject.Size)));
+                        Collisions.Add(new CollisionRectangle(this, new RectangleF(layerObject.Position, layerObject.Size)));
                     }
                 }
             }
@@ -58,10 +60,10 @@ namespace Midtown.Classes.Main.Game.Maps
                 {
                     foreach (TiledMapObject layerObject in layer.Objects)
                     {
-                        this.TeleportationZones.Add(
+                        TeleportationZones.Add(
                             new TeleportationZone(this,
                                 new RectangleF(layerObject.Position, layerObject.Size),
-                                ((GameplayScene)Scene).Maps.Single(map => map.Name == layerObject.Properties["destination-map"]),
+                                ((GameScreen)Screen).Maps.Single(map => map.Name == layerObject.Properties["destination-map"]),
                                 new Vector2(float.Parse(layerObject.Properties["destination-x"]), float.Parse(layerObject.Properties["destination-y"])),
                                 bool.Parse(layerObject.Properties["transition"])));
                     }
@@ -71,8 +73,9 @@ namespace Midtown.Classes.Main.Game.Maps
 
         public override void Load()
         {
-            _tiledMap = MainGame.Content.Load<TiledMap>(_file);
+            _tiledMap = Game.Content.Load<TiledMap>(_file);
             Renderer = new TiledMapRenderer(Game.GraphicsDevice, _tiledMap);
+            Tiles = new Tile[_tiledMap.Width,_tiledMap.Height];
 
             LoadCollisions();
             LoadTeleporters();
@@ -87,12 +90,12 @@ namespace Midtown.Classes.Main.Game.Maps
             base.Update(gameTime);
         }
 
-        public void DrawLayersByName(GameTime gameTime, SpriteBatch spriteBatch, string name)
+        public void DrawLayersByName(GameTime gameTime, string name)
         {
-            this.DrawLayersByName(Matrix.Identity, gameTime, spriteBatch, name);
+            DrawLayersByName(Matrix.Identity, gameTime, name);
         }
 
-        public void DrawLayersByName(Matrix matrix, GameTime gameTime, SpriteBatch spriteBatch, string name)
+        public void DrawLayersByName(Matrix matrix, GameTime gameTime, string name)
         {
             foreach (TiledMapLayer layer in _tiledMap.Layers)
             {
@@ -102,59 +105,59 @@ namespace Midtown.Classes.Main.Game.Maps
                 }
             }
 
-            base.Draw(gameTime, spriteBatch);
+            base.Draw(gameTime);
         }
 
-        public void DrawForeground(GameTime gameTime, SpriteBatch spriteBatch)
+        public void DrawForeground(GameTime gameTime)
         {
-            this.DrawForeground(Matrix.Identity, gameTime, spriteBatch);
+            DrawForeground(Matrix.Identity, gameTime);
         }
 
-        public void DrawForeground(Matrix matrix, GameTime gameTime, SpriteBatch spriteBatch)
+        public void DrawForeground(Matrix matrix, GameTime gameTime)
         {
-            DrawLayersByName(matrix, gameTime, spriteBatch, "foreground");
+            DrawLayersByName(matrix, gameTime, "foreground");
         }
 
-        public void DrawMiddleground(GameTime gameTime, SpriteBatch spriteBatch)
+        public void DrawMiddleground(GameTime gameTime)
         {
-            this.DrawMiddleground(Matrix.Identity, gameTime, spriteBatch);
+            DrawMiddleground(Matrix.Identity, gameTime);
         }
 
-        public void DrawMiddleground(Matrix matrix, GameTime gameTime, SpriteBatch spriteBatch)
+        public void DrawMiddleground(Matrix matrix, GameTime gameTime)
         {
-            DrawLayersByName(matrix, gameTime, spriteBatch, "middleground");
+            DrawLayersByName(matrix, gameTime, "middleground");
         }
 
-        public void DrawBackground(GameTime gameTime, SpriteBatch spriteBatch)
+        public void DrawBackground(GameTime gameTime)
         {
-            this.DrawBackground(Matrix.Identity, gameTime, spriteBatch);
+            DrawBackground(Matrix.Identity, gameTime);
         }
 
-        public void DrawBackground(Matrix matrix, GameTime gameTime, SpriteBatch spriteBatch)
+        public void DrawBackground(Matrix matrix, GameTime gameTime)
         {
-            DrawLayersByName(matrix, gameTime, spriteBatch, "background");
+            DrawLayersByName(matrix, gameTime, "background");
         }
 
-        public void DrawReflections(GameTime gameTime, SpriteBatch spriteBatch)
+        public void DrawReflections(GameTime gameTime)
         {
-            this.DrawReflections(Matrix.Identity, gameTime, spriteBatch);
+            DrawReflections(Matrix.Identity, gameTime);
         }
 
-        public void DrawReflections(Matrix matrix, GameTime gameTime, SpriteBatch spriteBatch)
+        public void DrawReflections(Matrix matrix, GameTime gameTime)
         {
-            DrawLayersByName(matrix, gameTime, spriteBatch, "reflections");
+            DrawLayersByName(matrix, gameTime, "reflections");
         }
 
-        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        public override void Draw(GameTime gameTime)
         {
-            this.Draw(Matrix.Identity, gameTime, spriteBatch);
+            Draw(Matrix.Identity, gameTime);
         }
 
-        public override void Draw(Matrix matrix, GameTime gameTime, SpriteBatch spriteBatch)
+        public override void Draw(Matrix matrix, GameTime gameTime)
         {
             Renderer.Draw(matrix);
 
-            base.Draw(gameTime, spriteBatch);
+            base.Draw(gameTime);
         }
     }
 }

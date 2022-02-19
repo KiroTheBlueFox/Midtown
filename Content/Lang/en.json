@@ -1,0 +1,39 @@
+{
+  "mainMenu.buttons.newGame": "New Game",
+  "mainMenu.buttons.continue": "Continue",
+  "mainMenu.buttons.settings": "Settings",
+  "mainMenu.buttons.exit": "Exit",
+
+  "settingsMenu.category.game": "Game Settings",
+  "settingsMenu.setting.windowMode": "Window Mode",
+  "settingsMenu.setting.windowMode.Fullscreen": "Fullscreen",
+  "settingsMenu.setting.windowMode.Borderless": "Borderless",
+  "settingsMenu.setting.windowMode.Windowed": "Windowed",
+  "settingsMenu.setting.language": "Language",
+  "settingsMenu.setting.language.fr": "French",
+  "settingsMenu.setting.language.en": "English",
+
+  "settingsMenu.category.controls": "Control Keys",
+  "settingsMenu.waitForKey": "Press a key",
+  "settingsMenu.setting.controls.MoveUp": "Go up",
+  "settingsMenu.setting.controls.MoveDown": "Go down",
+  "settingsMenu.setting.controls.MoveLeft": "Go left",
+  "settingsMenu.setting.controls.MoveRight": "Go right",
+  "settingsMenu.setting.controls.Interact": "Interact",
+  "settingsMenu.setting.controls.Walk": "Walk",
+
+  "season.spring": "Spring",
+  "season.summer": "Summer",
+  "season.autumn": "Autumn",
+  "season.winter": "Winter",
+
+  "day.1": "Monday",
+  "day.2": "Tuesday",
+  "day.3": "Wednesday",
+  "day.4": "Thursday",
+  "day.5": "Friday",
+  "day.6": "Saturday",
+  "day.7": "Sunday",
+
+  "year": "Year"
+}

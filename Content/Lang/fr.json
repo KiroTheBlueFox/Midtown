@@ -1,0 +1,39 @@
+{
+  "mainMenu.buttons.newGame": "Nouvelle Partie",
+  "mainMenu.buttons.continue": "Continuer",
+  "mainMenu.buttons.settings": "Options",
+  "mainMenu.buttons.exit": "Quitter",
+
+  "settingsMenu.category.game": "Paramètres de jeu",
+  "settingsMenu.setting.windowMode": "Mode d'Affichage",
+  "settingsMenu.setting.windowMode.Fullscreen": "Plein Ecran",
+  "settingsMenu.setting.windowMode.Borderless": "Sans Bordure",
+  "settingsMenu.setting.windowMode.Windowed": "Fenêtré",
+  "settingsMenu.setting.language": "Langage",
+  "settingsMenu.setting.language.fr": "Français",
+  "settingsMenu.setting.language.en": "Anglais",
+
+  "settingsMenu.category.controls": "Contrôles",
+  "settingsMenu.waitForKey": "Appuyez sur une touche",
+  "settingsMenu.setting.controls.MoveUp": "Se déplacer en haut",
+  "settingsMenu.setting.controls.MoveDown": "Se déplacer en bas",
+  "settingsMenu.setting.controls.MoveLeft": "Se déplacer à gauche",
+  "settingsMenu.setting.controls.MoveRight": "Se déplacer à droite",
+  "settingsMenu.setting.controls.Interact": "Intéragir",
+  "settingsMenu.setting.controls.Walk": "Marcher",
+
+  "season.spring": "Printemps",
+  "season.summer": "Été",
+  "season.autumn": "Automne",
+  "season.winter": "Hiver",
+
+  "day.1": "Lundi",
+  "day.2": "Mardi",
+  "day.3": "Mercredi",
+  "day.4": "Jeudi",
+  "day.5": "Vendredi",
+  "day.6": "Samedi",
+  "day.7": "Dimanche",
+
+  "year": "Année"
+}

@@ -1,22 +1,20 @@
 ﻿using Microsoft.Xna.Framework;
 using Midtown.Classes.Main.Game.MapElements;
 using Midtown.Classes.Main.Game.Maps;
-using MonoGameTestProject.Classes.Utils;
 using MonoGame.Extended;
 using MonoGame.Extended.Collisions;
-using Microsoft.Xna.Framework.Graphics;
 using Midtown.Classes.Utils;
 
 namespace Midtown.Classes.Main.Game.Entities
 {
     public class LivingEntity : Entity
     {
-        private AnimatedTexture sprite;
-        private readonly string spritePath, texturePath;
+        private AnimatedTexture2D sprite;
+        private readonly string texturePath;
+        public static readonly int SPEED = 50;
 
-        public LivingEntity(GameplayScene sceneOn, GameMap map, RectangleF bounds, string spritePath, string texturePath) : base(sceneOn, map, bounds, true)
+        public LivingEntity(GameScreen sceneOn, GameMap map, RectangleF bounds, Vector2 textureOffset, Vector2? shadowSize, Vector2? shadowOffset, string texturePath, bool collidable) : base(sceneOn, map, bounds, textureOffset, shadowSize, shadowOffset, true, collidable)
         {
-            this.spritePath = spritePath;
             this.texturePath = texturePath;
         }
 
@@ -24,7 +22,7 @@ namespace Midtown.Classes.Main.Game.Entities
         {
             base.Initialize();
 
-            sprite = new AnimatedTexture(MainGame, SceneOn, spritePath, texturePath, this);
+            sprite = new AnimatedTexture2D(Game, Screen, texturePath+".json", texturePath);
         }
 
         public override void Load()
@@ -39,9 +37,9 @@ namespace Midtown.Classes.Main.Game.Entities
         {
             if (collisionInfo.Other is TeleportationZone teleportationZone)
             {
-                this.CurrentMap = teleportationZone.DestinationMap;
-                this.Position = teleportationZone.DestinationPosition;
-                this._lastPosition = this.Position;
+                CurrentMap = teleportationZone.DestinationMap;
+                Position = teleportationZone.DestinationPosition;
+                _lastPosition = Position;
             }
             else
             {
@@ -66,14 +64,14 @@ namespace Midtown.Classes.Main.Game.Entities
             base.Update(gameTime);
         }
 
-        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        public override void Draw(GameTime gameTime)
         {
-            this.sprite.Draw(gameTime, spriteBatch);
+            sprite.Draw(gameTime, PixelPosition + TextureOffset);
         }
 
-        public override void DrawReflection(GameTime gameTime, SpriteBatch spriteBatch)
+        public override void DrawReflection(GameTime gameTime)
         {
-            this.sprite.DrawReflection(gameTime, spriteBatch);
+            sprite.DrawReflection(gameTime, PixelPosition + TextureOffset);
         }
     }
 }

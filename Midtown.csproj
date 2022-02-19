@@ -24,6 +24,7 @@
     <TrimmerRootAssembly Include="Microsoft.Xna.Framework.Content.ContentTypeReader" Visible="false" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="FontStashSharp.MonoGame" Version="1.0.4" />
     <PackageReference Include="MonoGame.Extended" Version="3.8.0" />
     <PackageReference Include="MonoGame.Extended.Collisions" Version="3.8.0" />
     <PackageReference Include="MonoGame.Extended.Content.Pipeline" Version="3.8.0" />
@@ -39,6 +40,12 @@
     <None Update="Content\Textures\player.sf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Content\Textures\serothsstatue.sf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
-  <ProjectExtensions><VisualStudio><UserProperties content_4config_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+  <ItemGroup>
+    <Folder Include="Content\Quests\" />
+  </ItemGroup>
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 </Project>

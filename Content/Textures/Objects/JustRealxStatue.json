@@ -1,0 +1,13 @@
+{
+  "textureAtlas": {
+    "regionWidth": 32,
+    "regionHeight": 48
+  },
+  "cycles": {
+    "animation": {
+      "frames": [0,1,2,1],
+      "isLooping": true,
+      "frameDuration": 0.5
+    }
+  }
+}
